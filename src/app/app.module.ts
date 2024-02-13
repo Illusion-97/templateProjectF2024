@@ -8,6 +8,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { MiniPostComponent } from './components/mini-post/mini-post.component';
 import { SearchComponent } from './components/search/search.component';
+import { CheckPipe } from './pipes/check.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SearchComponent } from './components/search/search.component';
     SidebarComponent,
     HeaderComponent,
     MiniPostComponent,
-    SearchComponent
+    SearchComponent,
+    CheckPipe
   ],
   imports: [
     BrowserModule,

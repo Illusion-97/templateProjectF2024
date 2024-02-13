@@ -46,14 +46,10 @@
           </header>
           <div class="mini-posts">
             <app-mini-post [miniPost]="aMiniPost"></app-mini-post>
-            <article>
-              <a href="#" class="image"><img src="assets/images/pic08.jpg" alt="" /></a>
-              <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-            </article>
-            <article>
-              <a href="#" class="image"><img src="assets/images/pic09.jpg" alt="" /></a>
-              <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore aliquam.</p>
-            </article>
+            <div *ngFor="let article of postArray">
+              <!--Attention : Il ne peut pas y avoir 2 directives sur la même balise-->
+              <app-mini-post  *ngIf="article.src" [miniPost]="article"></app-mini-post>
+            </div>
           </div>
           <ul class="actions">
             <li><button (click)="afficherMiniPostText()" class="button">More</button></li>

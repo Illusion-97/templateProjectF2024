@@ -18,4 +18,10 @@ export class SearchComponent {
     this.textChange.emit(this.text)
   }
 
+  /*checkText(value: string, remplacement: string = 'Aucun texte') {
+    // Valeurs dites 'Falsy'
+    // string -> undefined / null / ''
+    // number -> undefined / null / 0
+    return value || remplacement
+  }*/
 }
